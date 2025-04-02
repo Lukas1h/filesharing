@@ -8,13 +8,13 @@ cd $REPO_PATH
 echo "Watching for changes in $(pwd)..."
 whoami
 
-sudo -u blackout git status
+git status
 
 EXCLUDES=$(grep -Ev '^#|^$' .gitignore | awk '{print "--exclude=" $1}' | xargs)
 
 /usr/local/bin/fswatch -o . $EXCLUDES | while read change; do
     echo "Changes detected, syncing..."
-    sudo -u blackout git add . 
-    sudo -u blackout git commit -m "Auto commit: $(date)" 
-    sudo -u blackout git push origin main   # Change "main" if your branch name is different
+git add . 
+git commit -m "Auto commit: $(date)" 
+git push origin main   # Change "main" if your branch name is different
 done
