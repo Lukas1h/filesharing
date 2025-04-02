@@ -4,19 +4,23 @@ REPO_PATH="/Users/blackout/files.lukashahn.art"
 LOG_FILE="$REPO_PATH/sync.log"
 
 cd $REPO_PATH
-echo "\n\n\n"
-echo "Watching for changes in $(pwd)...\n"
-
-echo "I am am... $(whoami) (not a real religious man).\n"
+echo ""
+echo ""
+echo ""
+echo "Watching for changes in $(pwd)..."
+echo ""
+echo "I am am... $(whoami) (not a real religious man)."
+echo ""
 echo "Current git config:"
 echo "-------------------------------------"
 git config --list
 echo "-------------------------------------"
-
+echo ""
 echo "Current git status:"
 echo "-------------------------------------"
 git status
 echo "-------------------------------------"
+echo ""
 
 EXCLUDES=$(grep -Ev '^#|^$' .gitignore | awk '{print "--exclude=" $1}' | xargs)
 
