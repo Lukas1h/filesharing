@@ -6,7 +6,7 @@
         <string>art.lukashahn.files</string>
         <key>ProgramArguments</key>
         <array>
-            <string>/bin/sudo</string>
+            <string>/usr/bin/sudo</string>
             <string>-u</string>
             <string>blackout</string>
             <string>/bin/sh</string>
