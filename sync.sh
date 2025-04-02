@@ -6,7 +6,8 @@ LOG_FILE="$REPO_PATH/sync.log"
 cd $REPO_PATH
 
 fswatch -o . \
-        --exclude ".git" | while read change; do
+        --exclude ".git" \
+        --exclude "*.log" | while read change; do
     echo "Changes detected, syncing..." | tee -a $LOG_FILE
     git add . | tee -a $LOG_FILE
     git commit -m "Auto commit: $(date)" | tee -a $LOG_FILE
