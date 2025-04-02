@@ -9,7 +9,7 @@
             <string>/bin/sudo</string>
             <string>-u</string>
             <string>blackout</string>
-            <string>sh</string>
+            <string>/bin/sh</string>
             <string>/Users/blackout/files.lukashahn.art/sync.sh</string>
         </array>
         <key>RunAtLoad</key>
