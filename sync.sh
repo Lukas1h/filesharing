@@ -20,7 +20,7 @@ echo "-------------------------------------"
 
 EXCLUDES=$(grep -Ev '^#|^$' .gitignore | awk '{print "--exclude=" $1}' | xargs)
 
-/usr/local/bin/fswatch -o . $EXCLUDES | while read change; do
+fswatch -o . $EXCLUDES | while read change; do
     echo "Changes detected, syncing..."
 git add . 
 git commit -m "Auto commit: $(date)" 
