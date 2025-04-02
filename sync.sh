@@ -6,6 +6,8 @@ LOG_FILE="$REPO_PATH/sync.log"
 cd $REPO_PATH
 
 echo "Watching for changes in $(pwd)..."
+whoami
+
 
 EXCLUDES=$(grep -Ev '^#|^$' .gitignore | awk '{print "--exclude=" $1}' | xargs)
 
