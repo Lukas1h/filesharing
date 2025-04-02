@@ -7,7 +7,7 @@ cd $REPO_PATH
 
 echo "Watching for changes in $(pwd)..."
 whoami
-
+git status
 
 EXCLUDES=$(grep -Ev '^#|^$' .gitignore | awk '{print "--exclude=" $1}' | xargs)
 
