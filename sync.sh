@@ -5,11 +5,13 @@ LOG_FILE="$REPO_PATH/sync.log"
 
 cd $REPO_PATH
 
+echo "Watching for changes in $(pwd)..."
+
 EXCLUDES=$(grep -Ev '^#|^$' .gitignore | awk '{print "--exclude=" $1}' | xargs)
 
-fswatch -o . $EXCLUDES | while read change; do
-    echo "Changes detected, syncing..." | tee -a $LOG_FILE
-    git add . | tee -a $LOG_FILE
-    git commit -m "Auto commit: $(date)" | tee -a $LOG_FILE
-    git push origin main | tee -a $LOG_FILE  # Change "main" if your branch name is different
+/usr/local/bin/fswatch -o . $EXCLUDES | while read change; do
+    echo "Changes detected, syncing..."
+    git add . 
+    git commit -m "Auto commit: $(date)" 
+    git push origin main   # Change "main" if your branch name is different
 done
