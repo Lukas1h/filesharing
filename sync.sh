@@ -3,7 +3,7 @@
 REPO_PATH="/Users/blackout/files.lukashahn.art"
 LOG_FILE="$REPO_PATH/sync.log"
 HOME="/Users/blackout"
-git config --global --add safe.directory /Users/blackout/files.lukashahn.art
+ git config --list
 cd $REPO_PATH
 
 echo "Watching for changes in $(pwd)..."
