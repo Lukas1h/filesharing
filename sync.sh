@@ -7,6 +7,7 @@ cd $REPO_PATH
 
 echo "Watching for changes in $(pwd)..."
 whoami
+ git config --list
 
 git status
 
