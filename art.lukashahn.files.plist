@@ -10,15 +10,15 @@
             <string>-u</string>
             <string>blackout</string>
             <string>/bin/sh</string> -->
-            <string>/Users/blackout/files.lukashahn.art/sync.sh</string>
+            <string>/Users/lukashahn/files.lukashahn.art/sync.sh</string>
         </array>
         <key>RunAtLoad</key>
         <true />
         <key>UserName</key>
-        <string>blackout</string>
+        <string>lukashahn</string>
         <key>StandardOutPath</key>
-        <string>/Users/blackout/files.lukashahn.art/sync.log</string>
+        <string>/Users/lukashahn/files.lukashahn.art/sync.log</string>
         <key>StandardErrorPath</key>
-        <string>/Users/blackout/files.lukashahn.art/error.log</string>
+        <string>/Users/lukashahn/files.lukashahn.art/error.log</string>
     </dict>
 </plist>

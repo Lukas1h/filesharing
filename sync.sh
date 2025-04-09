@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO_PATH="/Users/blackout/files.lukashahn.art"
+REPO_PATH="/Users/lukashahn/files.lukashahn.art"
 LOG_FILE="$REPO_PATH/sync.log"
 
 cd $REPO_PATH
